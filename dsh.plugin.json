@@ -1,0 +1,16 @@
+{
+  "id": "dsh-external/dsh-update-check",
+  "version": "0.1.0",
+  "main": "./lib/index.js",
+  "description": "版本可见性：对照 npm registry 检查 DSH 与 profile 插件版本，模型工具 + Settings 页面 + 周期复查，只报告不升级",
+  "engines": {
+    "dsh": ">=0.0.1"
+  },
+  "contributes": {
+    "tools": ["dsh_check_updates"],
+    "skills": []
+  },
+  "client": {
+    "main": "./lib/client.js"
+  }
+}
