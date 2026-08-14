@@ -1,4 +1,5 @@
 # dsh-update-check bundle patch: mounts the plugin into a profile layer stack.
 - insert:
     - id: update-check
-      name: 'dsh-update-check'
+      name: 'dsh_check_updates'
+

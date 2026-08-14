@@ -1,5 +1,5 @@
 {
-  "name": "dsh-update-check",
+  "name": "dsh_check_updates",
   "version": "0.1.0",
   "description": "DeepSeek Harness 更新检查插件：DSH 本体与 profile 插件版本可见性（模型工具 + Settings 页面 + 周期复查），只报告不执行升级。",
   "keywords": [
@@ -44,3 +44,4 @@
   },
   "license": "MIT"
 }
+
