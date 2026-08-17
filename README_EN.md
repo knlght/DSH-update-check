@@ -13,7 +13,7 @@
 
 ## ✨ Features
 
-- **🔍 Version check**: compares installed versions against npm registry dist-tags for the DSH core (`@deepseek-ai/dsh`) and profile plugins (e.g. `@dsh-external/dsh-vision-toolkit`)
+- **🔍 Version check**: compares installed versions against npm registry dist-tags for the DSH core (`@deepseek-ai/dsh`) and profile plugins (e.g. `@anionex/dsh-vision-toolkit`)
 - **🤖 Model tool** `dsh_check_updates`: agents can query version status in any session (optional extra package names)
 - **🖥️ Settings page**: a new "Update Check" section with a version table (name / current / latest / status), last-checked time, and a "Check now" button
 - **⏰ Periodic re-check**: configurable interval (30s / 1m / 30m / 1h / 12h / 24h / off), default 1 hour; first check runs 30s after startup

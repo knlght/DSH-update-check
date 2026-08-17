@@ -13,7 +13,7 @@
 
 ## ✨ 功能一览
 
-- **🔍 版本检查**：对照 npm registry dist-tags，检查 DeepSeek Harness 本体（`@deepseek-ai/dsh`）与 profile 已装插件（如 `@dsh-external/dsh-vision-toolkit`）的当前版本与最新版本
+- **🔍 版本检查**：对照 npm registry dist-tags，检查 DeepSeek Harness 本体（`@deepseek-ai/dsh`）与 profile 已装插件（如 `@anionex/dsh-vision-toolkit`）的当前版本与最新版本
 - **🤖 模型工具** `dsh_check_updates`：agent 可在任意会话主动查询版本状态（支持传入额外包名）
 - **🖥️ Settings 页面**：侧栏新增「更新检查」页——版本表格（包名/当前/最新/状态）、上次检查时间、「立即检查」按钮
 - **⏰ 周期复查**：间隔可调（30 秒 / 1 分钟 / 30 分钟 / 1 小时 / 12 小时 / 24 小时 / 关闭），默认 1 小时；启动 30 秒后自动首查
