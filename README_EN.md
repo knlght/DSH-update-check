@@ -40,3 +40,27 @@ Tag your own plugins with <a href="https://github.com/topics/dsh-update-check"><
 ## 📄 License
 
 [MIT](./LICENSE)
+
+## 📝 Changelog
+
+### v0.2.0
+
+**Bug fixes**
+
+- **Version comparison**: fixed prerelease (`-rc.1`) handling — the whole version string used to be split on `.` and parsed numerically, so `0.1.5-rc.1` and `0.1.2-rc.1` compared equal and DSH was perpetually reported as up to date
+- **GitHub tag parsing**: fixed prefixed release tags such as `dsh-v0.1.5-rc.1` — previously only the `v` prefix was stripped, so the leftover prefix parsed as segment 0 and the `upstream-new` state could never trigger
+- **Self-skip**: auto-discovery now matches the npm package name (`dsh_check_updates`) as well as the directory name, so the plugin no longer lists itself
+- **UI false positive**: the Settings page no longer reports success when the endpoint returns an error
+
+**Robustness & security**
+
+- Added npm package-name validation, closing path traversal and URL injection through the `packages` tool argument
+- Concurrent refresh is deduplicated: timer, HTTP endpoint and model tool share a single in-flight check
+- Multi-package checks now run in parallel instead of sequentially
+- `intervalMinutes` is validated against the whitelist and falls back to 60 minutes
+- Oversized request bodies no longer destroy the socket, so the browser receives a proper 400
+- Resolving the npm global root is now asynchronous and no longer blocks the host event loop
+
+**Tests**
+
+- Added 17 behavioural tests (13 host + 4 client) covering version comparison, input validation, concurrency deduplication, HTTP endpoints and plugin teardown

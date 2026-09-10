@@ -1,0 +1,4 @@
+# npm 打包排除项（files 白名单之外的第二道防线）
+*.bak
+*.log
+test/
